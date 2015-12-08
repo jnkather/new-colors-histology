@@ -9,26 +9,29 @@ function [HDABtoRGB,RGBtoHDAB] = getConversionMatrix(style,varargin)
 
     if strcmp(style,'Fiji')
         % set of standard values for stain vectors from Fiji
+        % http://fiji.sc/Fiji
         He =  [ 0.6500286,   0.704031,    0.2860126 ]; % Hematoxylin
         DAB = [ 0.26814753,  0.57031375,  0.77642715]; % DAB
         Res = [ 0.7110272,   0.42318153,  0.5615672 ]; % Residual
 
     elseif strcmp(style,'scikit')
         % set of standard values for stain vectors from python scikit
+        % http://scikit-image.org
         % essentially the same as 'Fiji'
         He = [0.65, 0.70, 0.29];    % Hematoxylin
         DAB = [0.27, 0.57, 0.78];   % DAB
         Res = [0.07, 0.99, 0.11];   % Eosin channel = residual in H DAB
 
     elseif strcmp(style,'Ruifrok')
-        % set of standard values for stain vectors from python scikit
+        % set of standard values for stain vectors from Ruifrok et al.
+        % (http://www.ncbi.nlm.nih.gov/pubmed/11531144)
         He = [0.18, 0.20, 0.08];    % Hematoxylin
         DAB = [0.10, 0.21, 0.29];   % DAB
         Res = [0.01, 0.13, 0.01];   % Eosin channel = residual in H DAB
 
     elseif strcmp(style,'Pappenheim')
         % Pappenheim staining for blood smears. To do: change variable
-        % names. Source for vectors: Fiji.
+        % names. Source for vectors: Fiji (http://fiji.sc/Fiji)
         He = [0.8351288, 0.5137892, 0.19641943];    % Red
         DAB = [0.09283128, 0.9545457, 0.28324];     % Blue
         Res = [0.50013447, 0.001, 0.8659477];       % Residual
@@ -56,18 +59,17 @@ function [HDABtoRGB,RGBtoHDAB] = getConversionMatrix(style,varargin)
 
         imageRGB = varargin{1};
 
-        if strcmp(style,'Pappen-optimal')
+        if strcmp(style,'Pappen-optimal') % for Giemsa staining
         % start with standard values from Fiji
-        He = [0.8351288, 0.5137892, 0.19641943];    % Red
+        He = [0.8351288, 0.5137892, 0.19641943];  % Red
         DAB = [0.09283128, 0.9545457, 0.28324];   % Blue
 
-        elseif strcmp(style,'HE-optimal')
+        elseif strcmp(style,'HE-optimal') % for Hematoxylin/Eosin staining
         % start with standard values from Ruifrok
          He = [0.64, 0.72, 0.27];    % He
          DAB = [0.09, 0.95, 0.28];   % Eo
         
-        
-        elseif strcmp(style,'optimal') % formerly R-optimal
+        elseif strcmp(style,'optimal') % for Hematoxylin/DAB staining
         % start with standard values from Ruifrok
          He = [0.18, 0.20, 0.08];    % Hematoxylin
          DAB = [0.10, 0.21, 0.29];   % DAB
