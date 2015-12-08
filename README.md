@@ -1,6 +1,6 @@
 # new-colors-histology
 
-<img src="https://raw.githubusercontent.com/jnkather/new-colors-histology/master/output/Giemsa/A.png" alt="sample image" style="width: 50%;"/>
+<img src="https://raw.githubusercontent.com/jnkather/new-colors-histology/master/output/Giemsa/A.png" alt="sample image" />
 
 ## Overview
 
