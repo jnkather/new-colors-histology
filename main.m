@@ -23,6 +23,8 @@
 % THE SOFTWARE.
 %
 
+% this program was tested in MATLAB version R2015a
+
 % -- initialize program
 close all; format compact; clc; 
 
