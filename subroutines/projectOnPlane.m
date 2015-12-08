@@ -8,7 +8,7 @@ function pointsOut = projectOnPlane(pointsIn, normal, point)
     [m,n] = size(pointsIn);        % read size
     normal = normal/norm(normal);  % normalize the normal vector
     
-    % perform the actual procejtion
-    NO2 = normal.'*normal;          
-    pointsOut = pointsIn*(eye(3)-NO2)+repmat(point*NO2,m,1);
+    % perform the actual projection
+    proM = normal.'*normal;          
+    pointsOut = pointsIn*(eye(3)-proM)+repmat(point*proM,m,1);
 end

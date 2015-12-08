@@ -1,5 +1,8 @@
 % JN Kather 2015, for license see separate file
 
+% this is an implementation of Ruifrok's color deconvolution
+% see http://www.ncbi.nlm.nih.gov/pubmed/11531144
+
 function imageOut = SeparateStains(imageRGB, Matrix, varargin)
 
     % convert input image to double precision float

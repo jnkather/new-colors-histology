@@ -29,7 +29,8 @@ end
         % get old title
         oldTitle=get(get(allAxes(i),'Title'),'String');
         % prepare new title
-        titleStr = strcat('\fontsize{12} ', char(Titles(i)), 10, '\fontsize{8} ', char(oldTitle));
+        titleStr = strcat('\fontsize{12} ', char(Titles(i)), 10, ...
+            '\fontsize{8} ', char(oldTitle));
         % set new title
         title(titleStr,'interpreter','tex'); 
     end
