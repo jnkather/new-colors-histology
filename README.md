@@ -1,5 +1,7 @@
 # new-colors-histology
 
+![Sample image](https://raw.githubusercontent.com/jnkather/new-colors-histology/master/output/Giemsa/A.png)
+
 ## Overview
 
 This repository contains the source codes and raw data that were used in the project:
