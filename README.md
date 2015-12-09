@@ -8,7 +8,7 @@ This repository contains the source codes and raw data that were used in the pro
 
 "New colors for histology: optimized bivariate color maps increase perceptual contrast in histological images" by Jakob Nikolas Kather, Cleo-Aron Weis, Alexander Marx, Alexander K. Schuster, Lothar R. Schad and Frank Gerrit Zöllner.
 
-This project will be published in PLOS ONE 2015. For a detailed description of the computational methods, please refer to the paper. The source code was tested in Matlab R2015a.
+This project will be published in PLOS ONE 2015. For a detailed description of the computational methods, please refer to the paper. Additional information is also available in the article supplements. The source code was tested in Matlab R2015a.
 
 ## Licenses
 
